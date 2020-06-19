@@ -20,3 +20,17 @@ struct ChartItem {
     var key: String
     var value: Double
 }
+
+
+
+struct LineChart {
+    var title: String
+    var type: String
+    var description: String
+    var items: [LineChartItem]
+}
+
+struct LineChartItem {
+    var key: String
+    var value: [ChartItem]
+}
