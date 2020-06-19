@@ -143,6 +143,12 @@ final class DashBoardTableViewViewModel: ViewModel {
 }
 
 extension DashBoardTableViewViewModel {
+    func refresh() {
+        requestData()
+    }
+}
+
+extension DashBoardTableViewViewModel {
     fileprivate func requestData() {
         api.request(completionHandler: {[weak self] (response) in
             guard let strongSelf = self else { return }

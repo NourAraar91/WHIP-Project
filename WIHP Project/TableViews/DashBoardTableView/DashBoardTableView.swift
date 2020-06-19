@@ -15,6 +15,8 @@ final class DashBoardTableView: UITableView {
     
     let disposeBag = DisposeBag()
     
+    let refreshController = UIRefreshControl()
+    
     var viewModel: DashBoardTableViewViewModel! {
         didSet {
             // set delegate if need
@@ -25,6 +27,7 @@ final class DashBoardTableView: UITableView {
     
     override func updateConstraints() {
         setup()
+        setupRefreshControl()
         super.updateConstraints()
     }
     
@@ -38,6 +41,21 @@ final class DashBoardTableView: UITableView {
         rowHeight =  UITableViewAutomaticDimension
         keyboardDismissMode = .onDrag
     }
+    
+    func setupRefreshControl() {
+        refreshController.rx
+            .controlEvent(UIControlEvents.valueChanged)
+            .subscribe(onNext: {[weak self] (_) in
+            self?.viewModel.refresh()
+            self?.refreshController.endRefreshing()
+            }).disposed(by: disposeBag)
+            
+        if #available(iOS 10.0, *) {
+            self.refreshControl = refreshController
+        } else {
+            addSubview(refreshController)
+        }
+    }
 }
 
 // MARK:- ViewModelBinldable
@@ -48,5 +66,13 @@ extension DashBoardTableView {
             .asObservable()
             .bind(to: self.rx.items(dataSource: viewModel.skinTableViewDataSource()))
             .disposed(by: disposeBag)
+    }
+}
+
+extension DashBoardTableView {
+    func refresh() {
+        if (self.viewModel != nil ){
+            self.viewModel.refresh()
+        }
     }
 }
