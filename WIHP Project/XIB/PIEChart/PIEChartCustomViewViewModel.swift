@@ -12,18 +12,18 @@ import RxCocoa
 
 final class PIEChartCustomViewViewModel: ViewModel {
 
-    var chart: Chart
+    var chart: PieChart
     let chartTitle = BehaviorRelay<String>(value: "")
     let chartDescription = BehaviorRelay<String>(value: "")
     var chartItems = BehaviorRelay<[ChartItem]>(value: [])
     
-    init(chart: Chart) {
+    init(chart: PieChart) {
         self.chart = chart
         super.init()
         
-        self.chartTitle.accept(chart.title)
-        self.chartDescription.accept(chart.description)
-        self.chartItems.accept(chart.items)
+        self.chartTitle.accept(chart.title ?? "")
+        self.chartDescription.accept(chart.pieChartDescription ?? "")
+        self.chartItems.accept(chart.items ?? [])
     }
     
 }

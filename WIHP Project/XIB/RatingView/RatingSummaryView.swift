@@ -1,5 +1,5 @@
 //
-//  GrowthView.swift
+//  RatingSummaryView.swift
 //  WIHP Project
 //
 //  Created by Nour Araar on 6/19/20.
@@ -10,14 +10,10 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-final class GrowthView: View {
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descritpionLabel: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var growthLabel: UILabel!
+final class RatingSummaryView: View {
     
     // MARK:- ViewModel
-    var viewModel: GrowthViewViewModel! {
+    var viewModel: RatingSummaryViewViewModel! {
         didSet {
             bind()
         }
@@ -36,7 +32,7 @@ final class GrowthView: View {
     }
     
     fileprivate func load() {
-        let view = Bundle.main.loadNibNamed("GrowthView", owner: self, options: nil)![0] as! UIView
+        let view = Bundle.main.loadNibNamed("RatingSummaryView", owner: self, options: nil)![0] as! UIView
         view.frame = bounds
         view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         addSubview(view)
@@ -54,11 +50,7 @@ final class GrowthView: View {
 }
 
 // MARK:- ViewModelBinldable
-extension GrowthView {
+extension RatingSummaryView {
     func bind() {
-        titleLabel.text = viewModel.itemTitle.value
-        descritpionLabel.text = viewModel.itemDescrition.value
-        growthLabel.text = viewModel.growthPercent.value
-        imageView.image = viewModel.image.value
     }
 }

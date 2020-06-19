@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="76" id="mrp-vt-eqs" customClass="TitleTableViewCell" customModule="WIHP_Project" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mrp-vt-eqs" id="WX2-yl-FSU">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJ7-9o-TPD">
+                        <rect key="frame" x="16" y="16" width="44.5" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yni-rZ-DUw">
+                        <rect key="frame" x="16" y="45" width="37.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="JJ7-9o-TPD" firstAttribute="leading" secondItem="WX2-yl-FSU" secondAttribute="leading" constant="16" id="KlZ-VN-Ezh"/>
+                    <constraint firstItem="JJ7-9o-TPD" firstAttribute="top" secondItem="WX2-yl-FSU" secondAttribute="top" constant="16" id="eb0-Z5-1HG"/>
+                    <constraint firstItem="yni-rZ-DUw" firstAttribute="leading" secondItem="WX2-yl-FSU" secondAttribute="leading" constant="16" id="l6Z-lQ-4E6"/>
+                    <constraint firstItem="yni-rZ-DUw" firstAttribute="top" secondItem="JJ7-9o-TPD" secondAttribute="bottom" constant="8" id="uw5-GT-yNC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="descriptionLabel" destination="yni-rZ-DUw" id="J6U-RI-dCh"/>
+                <outlet property="titleLabel" destination="JJ7-9o-TPD" id="dcx-MA-540"/>
+            </connections>
+            <point key="canvasLocation" x="308" y="23.388305847076463"/>
+        </tableViewCell>
+    </objects>
+</document>

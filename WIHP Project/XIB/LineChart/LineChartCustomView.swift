@@ -38,6 +38,7 @@ final class LineChartCustomView: View {
     fileprivate func load() {
         let view = Bundle.main.loadNibNamed("LineChartCustomView", owner: self, options: nil)![0] as! UIView
         view.frame = bounds
+        view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         addSubview(view)
         setup()
     }

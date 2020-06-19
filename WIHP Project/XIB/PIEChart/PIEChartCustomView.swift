@@ -39,6 +39,7 @@ final class PIEChartCustomView: View {
     fileprivate func load() {
         let view = Bundle.main.loadNibNamed("PIEChartCustomView", owner: self, options: nil)![0] as! UIView
         view.frame = bounds
+        view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         addSubview(view)
         setup(pieChartView: chartView)
     }
@@ -78,7 +79,7 @@ final class PIEChartCustomView: View {
         
     func setData(_ items: [ChartItem]) {
         let entries = (0..<items.count).map { (i) -> PieChartDataEntry in
-            return PieChartDataEntry(value: items[i].value,
+            return PieChartDataEntry(value: items[i].value ?? 0.0,
                                      label: items[i].key,
                                      icon: nil)
         }

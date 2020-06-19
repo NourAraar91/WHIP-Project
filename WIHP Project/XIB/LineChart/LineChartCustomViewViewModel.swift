@@ -21,8 +21,8 @@ final class LineChartCustomViewViewModel: ViewModel {
         self.chart = chart
         super.init()
 
-        self.chartTitle.accept(chart.title)
-        self.chartDescription.accept(chart.description)
-        self.chartItems.accept(chart.items)
+        self.chartTitle.accept(chart.title ?? "")
+        self.chartDescription.accept(chart.lineChartDescription ?? "")
+        self.chartItems.accept(chart.items ?? [])
     }
 }
