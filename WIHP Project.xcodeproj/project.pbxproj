@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		277A9C6A249CB441009DA779 /* LineChartTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A9C67249CB441009DA779 /* LineChartTableViewCellViewModel.swift */; };
+		277A9C6B249CB441009DA779 /* LineChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A9C68249CB441009DA779 /* LineChartTableViewCell.swift */; };
+		277A9C6C249CB441009DA779 /* LineChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277A9C69249CB441009DA779 /* LineChartTableViewCell.xib */; };
+		277A9C71249CB5DB009DA779 /* JobTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A9C6E249CB5DB009DA779 /* JobTableViewCellViewModel.swift */; };
+		277A9C72249CB5DB009DA779 /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A9C6F249CB5DB009DA779 /* JobTableViewCell.swift */; };
+		277A9C73249CB5DB009DA779 /* JobTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277A9C70249CB5DB009DA779 /* JobTableViewCell.xib */; };
+		277A9C78249CB8B2009DA779 /* TitleTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A9C75249CB8B2009DA779 /* TitleTableViewCellViewModel.swift */; };
+		277A9C79249CB8B2009DA779 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A9C76249CB8B2009DA779 /* TitleTableViewCell.swift */; };
+		277A9C7A249CB8B2009DA779 /* TitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277A9C77249CB8B2009DA779 /* TitleTableViewCell.xib */; };
 		27CE4180249C608E00DECC9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE417F249C608E00DECC9A /* AppDelegate.swift */; };
-		27CE4184249C608E00DECC9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE4183249C608E00DECC9A /* ViewController.swift */; };
-		27CE4187249C608E00DECC9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CE4185249C608E00DECC9A /* Main.storyboard */; };
 		27CE4189249C609000DECC9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27CE4188249C609000DECC9A /* Assets.xcassets */; };
 		27CE418C249C609000DECC9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CE418A249C609000DECC9A /* LaunchScreen.storyboard */; };
 		27CE4194249C627F00DECC9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE4193249C627F00DECC9A /* SceneDelegate.swift */; };
@@ -18,7 +25,6 @@
 		27CE419F249C6CA500DECC9A /* PIEChartCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CE419C249C6CA500DECC9A /* PIEChartCustomView.xib */; };
 		27CE41A2249C6D2500DECC9A /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41A1249C6D2500DECC9A /* View.swift */; };
 		27CE41A5249C6F4000DECC9A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41A4249C6F4000DECC9A /* ViewModel.swift */; };
-		27CE41A8249C6FD300DECC9A /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41A7249C6FD300DECC9A /* Chart.swift */; };
 		27CE41AB249C756E00DECC9A /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41AA249C756E00DECC9A /* UIView+Ext.swift */; };
 		27CE41AE249C885900DECC9A /* DateFormater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41AD249C885900DECC9A /* DateFormater.swift */; };
 		27CE41B0249C8A0100DECC9A /* UIString+Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41AF249C8A0100DECC9A /* UIString+Date+Ext.swift */; };
@@ -28,16 +34,42 @@
 		27CE41BC249C94F200DECC9A /* GrowthViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41B9249C94F200DECC9A /* GrowthViewViewModel.swift */; };
 		27CE41BD249C94F200DECC9A /* GrowthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41BA249C94F200DECC9A /* GrowthView.swift */; };
 		27CE41BE249C94F200DECC9A /* GrowthView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CE41BB249C94F200DECC9A /* GrowthView.xib */; };
+		27CE41C3249C995000DECC9A /* RatingSummaryViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41C0249C995000DECC9A /* RatingSummaryViewViewModel.swift */; };
+		27CE41C4249C995000DECC9A /* RatingSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41C1249C995000DECC9A /* RatingSummaryView.swift */; };
+		27CE41C5249C995000DECC9A /* RatingSummaryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CE41C2249C995000DECC9A /* RatingSummaryView.xib */; };
+		27CE41CA249C9BD200DECC9A /* DashboardViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CE41C7249C9BD200DECC9A /* DashboardViewController.storyboard */; };
+		27CE41CB249C9BD200DECC9A /* DashboardViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41C8249C9BD200DECC9A /* DashboardViewControllerViewModel.swift */; };
+		27CE41CC249C9BD200DECC9A /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41C9249C9BD200DECC9A /* DashboardViewController.swift */; };
+		27CE41D1249C9CF400DECC9A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41CF249C9CF400DECC9A /* APIManager.swift */; };
+		27CE41D2249C9CF400DECC9A /* AppAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41D0249C9CF400DECC9A /* AppAPIManager.swift */; };
+		27CE41D5249C9D4400DECC9A /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41D4249C9D4400DECC9A /* GenericResponse.swift */; };
+		27CE41D7249C9E6700DECC9A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41D6249C9E6700DECC9A /* Response.swift */; };
+		27CE41DA249CA79B00DECC9A /* ResponseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41D9249CA79B00DECC9A /* ResponseAPI.swift */; };
+		27CE41DC249CA7C900DECC9A /* GenericService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41DB249CA7C900DECC9A /* GenericService.swift */; };
+		27CE41DE249CA7F200DECC9A /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41DD249CA7F200DECC9A /* ErrorResponse.swift */; };
+		27CE41E3249CAB5A00DECC9A /* DashBoardTableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41E1249CAB5A00DECC9A /* DashBoardTableViewViewModel.swift */; };
+		27CE41E4249CAB5A00DECC9A /* DashBoardTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41E2249CAB5A00DECC9A /* DashBoardTableView.swift */; };
+		27CE41E6249CAB9B00DECC9A /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41E5249CAB9B00DECC9A /* UITableView+Ext.swift */; };
+		27CE41EC249CABF000DECC9A /* PieChartTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41E9249CABF000DECC9A /* PieChartTableViewCellViewModel.swift */; };
+		27CE41ED249CABF000DECC9A /* PieChartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41EA249CABF000DECC9A /* PieChartTableViewCell.swift */; };
+		27CE41EE249CABF000DECC9A /* PieChartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CE41EB249CABF000DECC9A /* PieChartTableViewCell.xib */; };
 		2AE13C3AAAEF7A7D7F68CE50 /* Pods_WIHP_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00AE8083769CC51360CAD6F6 /* Pods_WIHP_Project.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		00AE8083769CC51360CAD6F6 /* Pods_WIHP_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WIHP_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17304FADD96504BB2D003C0C /* Pods-WIHP Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WIHP Project.debug.xcconfig"; path = "Target Support Files/Pods-WIHP Project/Pods-WIHP Project.debug.xcconfig"; sourceTree = "<group>"; };
+		277A9C67249CB441009DA779 /* LineChartTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		277A9C68249CB441009DA779 /* LineChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartTableViewCell.swift; sourceTree = "<group>"; };
+		277A9C69249CB441009DA779 /* LineChartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LineChartTableViewCell.xib; sourceTree = "<group>"; };
+		277A9C6E249CB5DB009DA779 /* JobTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		277A9C6F249CB5DB009DA779 /* JobTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
+		277A9C70249CB5DB009DA779 /* JobTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobTableViewCell.xib; sourceTree = "<group>"; };
+		277A9C75249CB8B2009DA779 /* TitleTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		277A9C76249CB8B2009DA779 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		277A9C77249CB8B2009DA779 /* TitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTableViewCell.xib; sourceTree = "<group>"; };
 		27CE417C249C608E00DECC9A /* WIHP Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WIHP Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CE417F249C608E00DECC9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		27CE4183249C608E00DECC9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		27CE4186249C608E00DECC9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27CE4188249C609000DECC9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27CE418B249C609000DECC9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27CE418D249C609000DECC9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,7 +79,6 @@
 		27CE419C249C6CA500DECC9A /* PIEChartCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PIEChartCustomView.xib; sourceTree = "<group>"; };
 		27CE41A1249C6D2500DECC9A /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		27CE41A4249C6F4000DECC9A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		27CE41A7249C6FD300DECC9A /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 		27CE41AA249C756E00DECC9A /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		27CE41AD249C885900DECC9A /* DateFormater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormater.swift; sourceTree = "<group>"; };
 		27CE41AF249C8A0100DECC9A /* UIString+Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIString+Date+Ext.swift"; sourceTree = "<group>"; };
@@ -57,6 +88,25 @@
 		27CE41B9249C94F200DECC9A /* GrowthViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowthViewViewModel.swift; sourceTree = "<group>"; };
 		27CE41BA249C94F200DECC9A /* GrowthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowthView.swift; sourceTree = "<group>"; };
 		27CE41BB249C94F200DECC9A /* GrowthView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GrowthView.xib; sourceTree = "<group>"; };
+		27CE41C0249C995000DECC9A /* RatingSummaryViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingSummaryViewViewModel.swift; sourceTree = "<group>"; };
+		27CE41C1249C995000DECC9A /* RatingSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingSummaryView.swift; sourceTree = "<group>"; };
+		27CE41C2249C995000DECC9A /* RatingSummaryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingSummaryView.xib; sourceTree = "<group>"; };
+		27CE41C7249C9BD200DECC9A /* DashboardViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DashboardViewController.storyboard; sourceTree = "<group>"; };
+		27CE41C8249C9BD200DECC9A /* DashboardViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewControllerViewModel.swift; sourceTree = "<group>"; };
+		27CE41C9249C9BD200DECC9A /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		27CE41CF249C9CF400DECC9A /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		27CE41D0249C9CF400DECC9A /* AppAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAPIManager.swift; sourceTree = "<group>"; };
+		27CE41D4249C9D4400DECC9A /* GenericResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
+		27CE41D6249C9E6700DECC9A /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		27CE41D9249CA79B00DECC9A /* ResponseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseAPI.swift; sourceTree = "<group>"; };
+		27CE41DB249CA7C900DECC9A /* GenericService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericService.swift; sourceTree = "<group>"; };
+		27CE41DD249CA7F200DECC9A /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		27CE41E1249CAB5A00DECC9A /* DashBoardTableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardTableViewViewModel.swift; sourceTree = "<group>"; };
+		27CE41E2249CAB5A00DECC9A /* DashBoardTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardTableView.swift; sourceTree = "<group>"; };
+		27CE41E5249CAB9B00DECC9A /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
+		27CE41E9249CABF000DECC9A /* PieChartTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		27CE41EA249CABF000DECC9A /* PieChartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartTableViewCell.swift; sourceTree = "<group>"; };
+		27CE41EB249CABF000DECC9A /* PieChartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PieChartTableViewCell.xib; sourceTree = "<group>"; };
 		84E08AD2BC06B6BF8FCA692F /* Pods-WIHP Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WIHP Project.release.xcconfig"; path = "Target Support Files/Pods-WIHP Project/Pods-WIHP Project.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +122,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		277A9C66249CB42E009DA779 /* LineChartCell */ = {
+			isa = PBXGroup;
+			children = (
+				277A9C67249CB441009DA779 /* LineChartTableViewCellViewModel.swift */,
+				277A9C68249CB441009DA779 /* LineChartTableViewCell.swift */,
+				277A9C69249CB441009DA779 /* LineChartTableViewCell.xib */,
+			);
+			path = LineChartCell;
+			sourceTree = "<group>";
+		};
+		277A9C6D249CB5C2009DA779 /* JobCell */ = {
+			isa = PBXGroup;
+			children = (
+				277A9C6E249CB5DB009DA779 /* JobTableViewCellViewModel.swift */,
+				277A9C6F249CB5DB009DA779 /* JobTableViewCell.swift */,
+				277A9C70249CB5DB009DA779 /* JobTableViewCell.xib */,
+			);
+			path = JobCell;
+			sourceTree = "<group>";
+		};
+		277A9C74249CB8A0009DA779 /* TitleCell */ = {
+			isa = PBXGroup;
+			children = (
+				277A9C75249CB8B2009DA779 /* TitleTableViewCellViewModel.swift */,
+				277A9C76249CB8B2009DA779 /* TitleTableViewCell.swift */,
+				277A9C77249CB8B2009DA779 /* TitleTableViewCell.xib */,
+			);
+			path = TitleCell;
+			sourceTree = "<group>";
+		};
 		27CE4173249C608D00DECC9A = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +173,12 @@
 		27CE417E249C608E00DECC9A /* WIHP Project */ = {
 			isa = PBXGroup;
 			children = (
+				27CE41E7249CABD300DECC9A /* TableviewCells */,
+				27CE41DF249CAB3700DECC9A /* TableViews */,
+				27CE41D8249CA76D00DECC9A /* API Services */,
+				27CE41D3249C9D3B00DECC9A /* Responses */,
+				27CE41CE249C9CE500DECC9A /* API Manager */,
+				27CE41C6249C9BB600DECC9A /* ViewControllers */,
 				27CE41AC249C884800DECC9A /* DateFormater */,
 				27CE41A9249C755A00DECC9A /* Extensions */,
 				27CE41A6249C6FC800DECC9A /* Models */,
@@ -100,8 +186,6 @@
 				27CE4198249C6BDF00DECC9A /* XIB */,
 				27CE4193249C627F00DECC9A /* SceneDelegate.swift */,
 				27CE417F249C608E00DECC9A /* AppDelegate.swift */,
-				27CE4183249C608E00DECC9A /* ViewController.swift */,
-				27CE4185249C608E00DECC9A /* Main.storyboard */,
 				27CE4188249C609000DECC9A /* Assets.xcassets */,
 				27CE418A249C609000DECC9A /* LaunchScreen.storyboard */,
 				27CE418D249C609000DECC9A /* Info.plist */,
@@ -112,6 +196,7 @@
 		27CE4198249C6BDF00DECC9A /* XIB */ = {
 			isa = PBXGroup;
 			children = (
+				27CE41BF249C993800DECC9A /* RatingView */,
 				27CE41B8249C94CF00DECC9A /* GrowthView */,
 				27CE41B1249C915200DECC9A /* LineChart */,
 				27CE4199249C6BE800DECC9A /* PIEChart */,
@@ -141,7 +226,7 @@
 		27CE41A6249C6FC800DECC9A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				27CE41A7249C6FD300DECC9A /* Chart.swift */,
+				27CE41D6249C9E6700DECC9A /* Response.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -151,6 +236,7 @@
 			children = (
 				27CE41AA249C756E00DECC9A /* UIView+Ext.swift */,
 				27CE41AF249C8A0100DECC9A /* UIString+Date+Ext.swift */,
+				27CE41E5249CAB9B00DECC9A /* UITableView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -181,6 +267,91 @@
 				27CE41BB249C94F200DECC9A /* GrowthView.xib */,
 			);
 			path = GrowthView;
+			sourceTree = "<group>";
+		};
+		27CE41BF249C993800DECC9A /* RatingView */ = {
+			isa = PBXGroup;
+			children = (
+				27CE41C0249C995000DECC9A /* RatingSummaryViewViewModel.swift */,
+				27CE41C1249C995000DECC9A /* RatingSummaryView.swift */,
+				27CE41C2249C995000DECC9A /* RatingSummaryView.xib */,
+			);
+			path = RatingView;
+			sourceTree = "<group>";
+		};
+		27CE41C6249C9BB600DECC9A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				27CE41C7249C9BD200DECC9A /* DashboardViewController.storyboard */,
+				27CE41C8249C9BD200DECC9A /* DashboardViewControllerViewModel.swift */,
+				27CE41C9249C9BD200DECC9A /* DashboardViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		27CE41CE249C9CE500DECC9A /* API Manager */ = {
+			isa = PBXGroup;
+			children = (
+				27CE41CF249C9CF400DECC9A /* APIManager.swift */,
+				27CE41D0249C9CF400DECC9A /* AppAPIManager.swift */,
+			);
+			path = "API Manager";
+			sourceTree = "<group>";
+		};
+		27CE41D3249C9D3B00DECC9A /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				27CE41D4249C9D4400DECC9A /* GenericResponse.swift */,
+				27CE41DD249CA7F200DECC9A /* ErrorResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		27CE41D8249CA76D00DECC9A /* API Services */ = {
+			isa = PBXGroup;
+			children = (
+				27CE41D9249CA79B00DECC9A /* ResponseAPI.swift */,
+				27CE41DB249CA7C900DECC9A /* GenericService.swift */,
+			);
+			path = "API Services";
+			sourceTree = "<group>";
+		};
+		27CE41DF249CAB3700DECC9A /* TableViews */ = {
+			isa = PBXGroup;
+			children = (
+				27CE41E0249CAB3F00DECC9A /* DashBoardTableView */,
+			);
+			path = TableViews;
+			sourceTree = "<group>";
+		};
+		27CE41E0249CAB3F00DECC9A /* DashBoardTableView */ = {
+			isa = PBXGroup;
+			children = (
+				27CE41E1249CAB5A00DECC9A /* DashBoardTableViewViewModel.swift */,
+				27CE41E2249CAB5A00DECC9A /* DashBoardTableView.swift */,
+			);
+			path = DashBoardTableView;
+			sourceTree = "<group>";
+		};
+		27CE41E7249CABD300DECC9A /* TableviewCells */ = {
+			isa = PBXGroup;
+			children = (
+				277A9C74249CB8A0009DA779 /* TitleCell */,
+				277A9C6D249CB5C2009DA779 /* JobCell */,
+				277A9C66249CB42E009DA779 /* LineChartCell */,
+				27CE41E8249CABDD00DECC9A /* PieChartCell */,
+			);
+			path = TableviewCells;
+			sourceTree = "<group>";
+		};
+		27CE41E8249CABDD00DECC9A /* PieChartCell */ = {
+			isa = PBXGroup;
+			children = (
+				27CE41E9249CABF000DECC9A /* PieChartTableViewCellViewModel.swift */,
+				27CE41EA249CABF000DECC9A /* PieChartTableViewCell.swift */,
+				27CE41EB249CABF000DECC9A /* PieChartTableViewCell.xib */,
+			);
+			path = PieChartCell;
 			sourceTree = "<group>";
 		};
 		30F96F38B4446C4B31CAC7C8 /* Pods */ = {
@@ -260,12 +431,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				277A9C7A249CB8B2009DA779 /* TitleTableViewCell.xib in Resources */,
+				27CE41EE249CABF000DECC9A /* PieChartTableViewCell.xib in Resources */,
+				27CE41CA249C9BD200DECC9A /* DashboardViewController.storyboard in Resources */,
 				27CE418C249C609000DECC9A /* LaunchScreen.storyboard in Resources */,
+				277A9C73249CB5DB009DA779 /* JobTableViewCell.xib in Resources */,
 				27CE41BE249C94F200DECC9A /* GrowthView.xib in Resources */,
+				277A9C6C249CB441009DA779 /* LineChartTableViewCell.xib in Resources */,
 				27CE419F249C6CA500DECC9A /* PIEChartCustomView.xib in Resources */,
 				27CE41B7249C916800DECC9A /* LineChartCustomView.xib in Resources */,
 				27CE4189249C609000DECC9A /* Assets.xcassets in Resources */,
-				27CE4187249C608E00DECC9A /* Main.storyboard in Resources */,
+				27CE41C5249C995000DECC9A /* RatingSummaryView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,35 +494,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				277A9C79249CB8B2009DA779 /* TitleTableViewCell.swift in Sources */,
+				27CE41CC249C9BD200DECC9A /* DashboardViewController.swift in Sources */,
 				27CE41B0249C8A0100DECC9A /* UIString+Date+Ext.swift in Sources */,
+				27CE41ED249CABF000DECC9A /* PieChartTableViewCell.swift in Sources */,
+				27CE41E6249CAB9B00DECC9A /* UITableView+Ext.swift in Sources */,
 				27CE41BD249C94F200DECC9A /* GrowthView.swift in Sources */,
-				27CE41A8249C6FD300DECC9A /* Chart.swift in Sources */,
+				27CE41D2249C9CF400DECC9A /* AppAPIManager.swift in Sources */,
+				27CE41EC249CABF000DECC9A /* PieChartTableViewCellViewModel.swift in Sources */,
 				27CE41BC249C94F200DECC9A /* GrowthViewViewModel.swift in Sources */,
-				27CE4184249C608E00DECC9A /* ViewController.swift in Sources */,
 				27CE4180249C608E00DECC9A /* AppDelegate.swift in Sources */,
+				27CE41CB249C9BD200DECC9A /* DashboardViewControllerViewModel.swift in Sources */,
 				27CE41A2249C6D2500DECC9A /* View.swift in Sources */,
 				27CE41B5249C916800DECC9A /* LineChartCustomViewViewModel.swift in Sources */,
 				27CE41B6249C916800DECC9A /* LineChartCustomView.swift in Sources */,
 				27CE419D249C6CA500DECC9A /* PIEChartCustomViewViewModel.swift in Sources */,
+				277A9C6A249CB441009DA779 /* LineChartTableViewCellViewModel.swift in Sources */,
+				27CE41D1249C9CF400DECC9A /* APIManager.swift in Sources */,
+				27CE41D5249C9D4400DECC9A /* GenericResponse.swift in Sources */,
+				27CE41C3249C995000DECC9A /* RatingSummaryViewViewModel.swift in Sources */,
 				27CE41AB249C756E00DECC9A /* UIView+Ext.swift in Sources */,
+				277A9C6B249CB441009DA779 /* LineChartTableViewCell.swift in Sources */,
+				277A9C72249CB5DB009DA779 /* JobTableViewCell.swift in Sources */,
 				27CE419E249C6CA500DECC9A /* PIEChartCustomView.swift in Sources */,
+				27CE41DA249CA79B00DECC9A /* ResponseAPI.swift in Sources */,
+				27CE41C4249C995000DECC9A /* RatingSummaryView.swift in Sources */,
+				277A9C71249CB5DB009DA779 /* JobTableViewCellViewModel.swift in Sources */,
 				27CE41AE249C885900DECC9A /* DateFormater.swift in Sources */,
+				27CE41D7249C9E6700DECC9A /* Response.swift in Sources */,
 				27CE4194249C627F00DECC9A /* SceneDelegate.swift in Sources */,
+				27CE41DC249CA7C900DECC9A /* GenericService.swift in Sources */,
+				277A9C78249CB8B2009DA779 /* TitleTableViewCellViewModel.swift in Sources */,
+				27CE41E3249CAB5A00DECC9A /* DashBoardTableViewViewModel.swift in Sources */,
 				27CE41A5249C6F4000DECC9A /* ViewModel.swift in Sources */,
+				27CE41E4249CAB5A00DECC9A /* DashBoardTableView.swift in Sources */,
+				27CE41DE249CA7F200DECC9A /* ErrorResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		27CE4185249C608E00DECC9A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				27CE4186249C608E00DECC9A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		27CE418A249C609000DECC9A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

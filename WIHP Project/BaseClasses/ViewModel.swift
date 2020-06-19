@@ -11,5 +11,7 @@ import RxSwift
 
 class ViewModel: NSObject {
     var disposeBag = DisposeBag()
+    
+    let UUID = Foundation.UUID().uuidString
 }
 
