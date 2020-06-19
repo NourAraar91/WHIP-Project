@@ -32,7 +32,8 @@ final class DashBoardTableView: UITableView {
         let cells = [ PieChartTableViewCell.self
                     , LineChartTableViewCell.self
                     , JobTableViewCell.self
-                    , TitleTableViewCell.self]
+                    , TitleTableViewCell.self
+                    , RateTableViewCell.self ]
         registerCells(cells: cells)
         rowHeight =  UITableViewAutomaticDimension
         keyboardDismissMode = .onDrag

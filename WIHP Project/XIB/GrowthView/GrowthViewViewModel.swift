@@ -22,10 +22,10 @@ final class GrowthViewViewModel: ViewModel {
         self.item = item
         super.init()
 
-        itemTitle.accept(item.title ?? "")
-        itemDescrition.accept(item.itemDescription ?? "")
-        growthPercent.accept("\(item.growth ?? 0)%")
-        if (item.growth ?? 0) >= 0 {
+        itemTitle.accept(item.title)
+        itemDescrition.accept(item.itemDescription)
+        growthPercent.accept("\(item.growth)%")
+        if item.growth >= 0 {
             image.accept(UIImage(named:"up"))
         } else {
             image.accept(UIImage(named:"down"))

@@ -13,8 +13,9 @@ import RxCocoa
 final class RatingSummaryViewViewModel: ViewModel {
 
     // MARK:- Dependency
-    
-    init(x:Int){
+    var items: [String: Int]
+    init(items: [String: Int]){
+        self.items = items
         super.init()
     }
 }

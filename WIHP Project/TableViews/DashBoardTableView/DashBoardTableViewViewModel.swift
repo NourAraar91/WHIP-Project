@@ -30,15 +30,25 @@ final class DashBoardTableViewViewModel: ViewModel {
         
         responseObserver.asObserver().subscribe(onNext: { [weak self](response) in
             guard let strongSelf = self else { return }
-            guard let response = response else { return }
+            guard let response = response?.response else { return }
             strongSelf.sections.removeAll()
+            
+            let rateTitleViewModle = TitleTableViewCellViewModel(title: "Rating", subtitle: "Rating Description")
+            let rateTitleItem = DashBoardTableViewViewModelSectionItem.title(viewModel: rateTitleViewModle)
+            strongSelf.sections.append(DashBoardTableViewViewModelSectionModel.section(items: [rateTitleItem]))
+            
+            let ratings = response.data.analytics.rating.items
+            let rateViewModle = RateTableViewCellViewModel(items: ratings)
+            let rateItem = DashBoardTableViewViewModelSectionItem.rate(viewModel: rateViewModle)
+            strongSelf.sections.append(DashBoardTableViewViewModelSectionModel.section(items: [rateItem]))
+            
             
             
             let jobTitleViewModle = TitleTableViewCellViewModel(title: "Job", subtitle: "Job Description")
             let jobTitleItem = DashBoardTableViewViewModelSectionItem.title(viewModel: jobTitleViewModle)
             strongSelf.sections.append(DashBoardTableViewViewModelSectionModel.section(items: [jobTitleItem]))
             
-            let jobs = response.response?.data.analytics.job.items ?? []
+            let jobs = response.data.analytics.job.items
             var jobsItemsList = [DashBoardTableViewViewModelSectionItem]()
             for job in jobs {
                 let cellViewModel = JobTableViewCellViewModel(growthItem: job)
@@ -53,7 +63,7 @@ final class DashBoardTableViewViewModel: ViewModel {
             let servicesTitleItem = DashBoardTableViewViewModelSectionItem.title(viewModel: servicesTitleViewModle)
             strongSelf.sections.append(DashBoardTableViewViewModelSectionModel.section(items: [servicesTitleItem]))
             
-            let services = response.response?.data.analytics.service.items ?? []
+            let services = response.data.analytics.service.items
             var servicesItemsList = [DashBoardTableViewViewModelSectionItem]()
             for service in services {
                 let cellViewModel = JobTableViewCellViewModel(growthItem: service)
@@ -65,7 +75,7 @@ final class DashBoardTableViewViewModel: ViewModel {
             
             
             
-            let linecharts = response.response?.data.analytics.lineCharts ?? []
+            let linecharts = response.data.analytics.lineCharts
             var lineChartItemsList = [DashBoardTableViewViewModelSectionItem]()
             for chart in linecharts.first ?? [] {
                 let cellViewModel = LineChartTableViewCellViewModel(chart: chart)
@@ -76,7 +86,7 @@ final class DashBoardTableViewViewModel: ViewModel {
             strongSelf.sections.append(DashBoardTableViewViewModelSectionModel.section(items: lineChartItemsList))
             
             
-            let piecharts = response.response?.data.analytics.pieCharts ?? []
+            let piecharts = response.data.analytics.pieCharts
             var pieChartItemsList = [DashBoardTableViewViewModelSectionItem]()
             for chart in piecharts {
                 let cellViewModel = PieChartTableViewCellViewModel(chart: chart)
@@ -121,6 +131,12 @@ final class DashBoardTableViewViewModel: ViewModel {
                     cell.layoutIfNeeded()
                     cell.layoutSubviews()
                     return cell
+                case .rate(viewModel: let viewModel):
+                    let cell: RateTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
+                    cell.viewModel = viewModel
+                    cell.layoutIfNeeded()
+                    cell.layoutSubviews()
+                    return cell
                 }
         })
     }
@@ -147,6 +163,7 @@ enum DashBoardTableViewViewModelSectionItem {
     case lineChart(viewModel: LineChartTableViewCellViewModel)
     case job(viewModel: JobTableViewCellViewModel)
     case title(viewModel: TitleTableViewCellViewModel)
+    case rate(viewModel: RateTableViewCellViewModel)
     
     var identity: String {
         switch self {
@@ -154,6 +171,7 @@ enum DashBoardTableViewViewModelSectionItem {
         case .lineChart(viewModel: let viewModel): return viewModel.UUID
         case .job(viewModel: let viewModel): return viewModel.UUID
         case .title(viewModel: let viewModel): return viewModel.UUID
+        case .rate(viewModel: let viewModel): return viewModel.UUID
         }
     }
 }
@@ -199,6 +217,8 @@ extension DashBoardTableViewViewModel: UITableViewDelegate {
             return 100
         case .title(viewModel: _):
             return 76
+        case .rate(viewModel: _):
+            return 132
         }
     }
 }

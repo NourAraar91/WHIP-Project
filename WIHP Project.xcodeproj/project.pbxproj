@@ -16,6 +16,10 @@
 		277A9C78249CB8B2009DA779 /* TitleTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A9C75249CB8B2009DA779 /* TitleTableViewCellViewModel.swift */; };
 		277A9C79249CB8B2009DA779 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A9C76249CB8B2009DA779 /* TitleTableViewCell.swift */; };
 		277A9C7A249CB8B2009DA779 /* TitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277A9C77249CB8B2009DA779 /* TitleTableViewCell.xib */; };
+		277A9C81249D0510009DA779 /* RateTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A9C7E249D0510009DA779 /* RateTableViewCellViewModel.swift */; };
+		277A9C82249D0510009DA779 /* RateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A9C7F249D0510009DA779 /* RateTableViewCell.swift */; };
+		277A9C83249D0510009DA779 /* RateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 277A9C80249D0510009DA779 /* RateTableViewCell.xib */; };
+		277A9C85249D0C40009DA779 /* StarValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277A9C84249D0C40009DA779 /* StarValueFormatter.swift */; };
 		27CE4180249C608E00DECC9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE417F249C608E00DECC9A /* AppDelegate.swift */; };
 		27CE4189249C609000DECC9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27CE4188249C609000DECC9A /* Assets.xcassets */; };
 		27CE418C249C609000DECC9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CE418A249C609000DECC9A /* LaunchScreen.storyboard */; };
@@ -68,6 +72,10 @@
 		277A9C75249CB8B2009DA779 /* TitleTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		277A9C76249CB8B2009DA779 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
 		277A9C77249CB8B2009DA779 /* TitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleTableViewCell.xib; sourceTree = "<group>"; };
+		277A9C7E249D0510009DA779 /* RateTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		277A9C7F249D0510009DA779 /* RateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateTableViewCell.swift; sourceTree = "<group>"; };
+		277A9C80249D0510009DA779 /* RateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RateTableViewCell.xib; sourceTree = "<group>"; };
+		277A9C84249D0C40009DA779 /* StarValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarValueFormatter.swift; sourceTree = "<group>"; };
 		27CE417C249C608E00DECC9A /* WIHP Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WIHP Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CE417F249C608E00DECC9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27CE4188249C609000DECC9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -152,6 +160,16 @@
 			path = TitleCell;
 			sourceTree = "<group>";
 		};
+		277A9C7D249D0501009DA779 /* RateCell */ = {
+			isa = PBXGroup;
+			children = (
+				277A9C7E249D0510009DA779 /* RateTableViewCellViewModel.swift */,
+				277A9C7F249D0510009DA779 /* RateTableViewCell.swift */,
+				277A9C80249D0510009DA779 /* RateTableViewCell.xib */,
+			);
+			path = RateCell;
+			sourceTree = "<group>";
+		};
 		27CE4173249C608D00DECC9A = {
 			isa = PBXGroup;
 			children = (
@@ -179,7 +197,7 @@
 				27CE41D3249C9D3B00DECC9A /* Responses */,
 				27CE41CE249C9CE500DECC9A /* API Manager */,
 				27CE41C6249C9BB600DECC9A /* ViewControllers */,
-				27CE41AC249C884800DECC9A /* DateFormater */,
+				27CE41AC249C884800DECC9A /* Value Formater */,
 				27CE41A9249C755A00DECC9A /* Extensions */,
 				27CE41A6249C6FC800DECC9A /* Models */,
 				27CE41A0249C6D0D00DECC9A /* BaseClasses */,
@@ -241,12 +259,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		27CE41AC249C884800DECC9A /* DateFormater */ = {
+		27CE41AC249C884800DECC9A /* Value Formater */ = {
 			isa = PBXGroup;
 			children = (
 				27CE41AD249C885900DECC9A /* DateFormater.swift */,
+				277A9C84249D0C40009DA779 /* StarValueFormatter.swift */,
 			);
-			path = DateFormater;
+			path = "Value Formater";
 			sourceTree = "<group>";
 		};
 		27CE41B1249C915200DECC9A /* LineChart */ = {
@@ -336,6 +355,7 @@
 		27CE41E7249CABD300DECC9A /* TableviewCells */ = {
 			isa = PBXGroup;
 			children = (
+				277A9C7D249D0501009DA779 /* RateCell */,
 				277A9C74249CB8A0009DA779 /* TitleCell */,
 				277A9C6D249CB5C2009DA779 /* JobCell */,
 				277A9C66249CB42E009DA779 /* LineChartCell */,
@@ -432,6 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				277A9C7A249CB8B2009DA779 /* TitleTableViewCell.xib in Resources */,
+				277A9C83249D0510009DA779 /* RateTableViewCell.xib in Resources */,
 				27CE41EE249CABF000DECC9A /* PieChartTableViewCell.xib in Resources */,
 				27CE41CA249C9BD200DECC9A /* DashboardViewController.storyboard in Resources */,
 				27CE418C249C609000DECC9A /* LaunchScreen.storyboard in Resources */,
@@ -495,7 +516,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				277A9C79249CB8B2009DA779 /* TitleTableViewCell.swift in Sources */,
+				277A9C82249D0510009DA779 /* RateTableViewCell.swift in Sources */,
 				27CE41CC249C9BD200DECC9A /* DashboardViewController.swift in Sources */,
+				277A9C85249D0C40009DA779 /* StarValueFormatter.swift in Sources */,
 				27CE41B0249C8A0100DECC9A /* UIString+Date+Ext.swift in Sources */,
 				27CE41ED249CABF000DECC9A /* PieChartTableViewCell.swift in Sources */,
 				27CE41E6249CAB9B00DECC9A /* UITableView+Ext.swift in Sources */,
@@ -510,6 +533,7 @@
 				27CE41B6249C916800DECC9A /* LineChartCustomView.swift in Sources */,
 				27CE419D249C6CA500DECC9A /* PIEChartCustomViewViewModel.swift in Sources */,
 				277A9C6A249CB441009DA779 /* LineChartTableViewCellViewModel.swift in Sources */,
+				277A9C81249D0510009DA779 /* RateTableViewCellViewModel.swift in Sources */,
 				27CE41D1249C9CF400DECC9A /* APIManager.swift in Sources */,
 				27CE41D5249C9D4400DECC9A /* GenericResponse.swift in Sources */,
 				27CE41C3249C995000DECC9A /* RatingSummaryViewViewModel.swift in Sources */,
@@ -666,7 +690,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RXEQF54W6W;
+				DEVELOPMENT_TEAM = E5963CA2JF;
 				INFOPLIST_FILE = "WIHP Project/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -686,7 +710,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RXEQF54W6W;
+				DEVELOPMENT_TEAM = E5963CA2JF;
 				INFOPLIST_FILE = "WIHP Project/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
