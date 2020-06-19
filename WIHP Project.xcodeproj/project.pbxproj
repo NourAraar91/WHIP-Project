@@ -25,6 +25,9 @@
 		27CE41B5249C916800DECC9A /* LineChartCustomViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41B2249C916800DECC9A /* LineChartCustomViewViewModel.swift */; };
 		27CE41B6249C916800DECC9A /* LineChartCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41B3249C916800DECC9A /* LineChartCustomView.swift */; };
 		27CE41B7249C916800DECC9A /* LineChartCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CE41B4249C916800DECC9A /* LineChartCustomView.xib */; };
+		27CE41BC249C94F200DECC9A /* GrowthViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41B9249C94F200DECC9A /* GrowthViewViewModel.swift */; };
+		27CE41BD249C94F200DECC9A /* GrowthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE41BA249C94F200DECC9A /* GrowthView.swift */; };
+		27CE41BE249C94F200DECC9A /* GrowthView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27CE41BB249C94F200DECC9A /* GrowthView.xib */; };
 		2AE13C3AAAEF7A7D7F68CE50 /* Pods_WIHP_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00AE8083769CC51360CAD6F6 /* Pods_WIHP_Project.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +54,9 @@
 		27CE41B2249C916800DECC9A /* LineChartCustomViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartCustomViewViewModel.swift; sourceTree = "<group>"; };
 		27CE41B3249C916800DECC9A /* LineChartCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartCustomView.swift; sourceTree = "<group>"; };
 		27CE41B4249C916800DECC9A /* LineChartCustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LineChartCustomView.xib; sourceTree = "<group>"; };
+		27CE41B9249C94F200DECC9A /* GrowthViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowthViewViewModel.swift; sourceTree = "<group>"; };
+		27CE41BA249C94F200DECC9A /* GrowthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowthView.swift; sourceTree = "<group>"; };
+		27CE41BB249C94F200DECC9A /* GrowthView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GrowthView.xib; sourceTree = "<group>"; };
 		84E08AD2BC06B6BF8FCA692F /* Pods-WIHP Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WIHP Project.release.xcconfig"; path = "Target Support Files/Pods-WIHP Project/Pods-WIHP Project.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +112,7 @@
 		27CE4198249C6BDF00DECC9A /* XIB */ = {
 			isa = PBXGroup;
 			children = (
+				27CE41B8249C94CF00DECC9A /* GrowthView */,
 				27CE41B1249C915200DECC9A /* LineChart */,
 				27CE4199249C6BE800DECC9A /* PIEChart */,
 			);
@@ -164,6 +171,16 @@
 				27CE41B4249C916800DECC9A /* LineChartCustomView.xib */,
 			);
 			path = LineChart;
+			sourceTree = "<group>";
+		};
+		27CE41B8249C94CF00DECC9A /* GrowthView */ = {
+			isa = PBXGroup;
+			children = (
+				27CE41B9249C94F200DECC9A /* GrowthViewViewModel.swift */,
+				27CE41BA249C94F200DECC9A /* GrowthView.swift */,
+				27CE41BB249C94F200DECC9A /* GrowthView.xib */,
+			);
+			path = GrowthView;
 			sourceTree = "<group>";
 		};
 		30F96F38B4446C4B31CAC7C8 /* Pods */ = {
@@ -244,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27CE418C249C609000DECC9A /* LaunchScreen.storyboard in Resources */,
+				27CE41BE249C94F200DECC9A /* GrowthView.xib in Resources */,
 				27CE419F249C6CA500DECC9A /* PIEChartCustomView.xib in Resources */,
 				27CE41B7249C916800DECC9A /* LineChartCustomView.xib in Resources */,
 				27CE4189249C609000DECC9A /* Assets.xcassets in Resources */,
@@ -301,7 +319,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				27CE41B0249C8A0100DECC9A /* UIString+Date+Ext.swift in Sources */,
+				27CE41BD249C94F200DECC9A /* GrowthView.swift in Sources */,
 				27CE41A8249C6FD300DECC9A /* Chart.swift in Sources */,
+				27CE41BC249C94F200DECC9A /* GrowthViewViewModel.swift in Sources */,
 				27CE4184249C608E00DECC9A /* ViewController.swift in Sources */,
 				27CE4180249C608E00DECC9A /* AppDelegate.swift in Sources */,
 				27CE41A2249C6D2500DECC9A /* View.swift in Sources */,

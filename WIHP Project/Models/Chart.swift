@@ -34,3 +34,10 @@ struct LineChartItem {
     var key: String
     var value: [ChartItem]
 }
+
+
+struct GrowthItem {
+    var title: String
+    var description: String
+    var growth: Int
+}
