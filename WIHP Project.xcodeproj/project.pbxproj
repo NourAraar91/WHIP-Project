@@ -79,7 +79,6 @@
 			children = (
 				27CE41A9249C755A00DECC9A /* Extensions */,
 				27CE41A6249C6FC800DECC9A /* Models */,
-				27CE41A3249C6E1800DECC9A /* Types */,
 				27CE41A0249C6D0D00DECC9A /* BaseClasses */,
 				27CE4198249C6BDF00DECC9A /* XIB */,
 				27CE4193249C627F00DECC9A /* SceneDelegate.swift */,
@@ -118,13 +117,6 @@
 				27CE41A4249C6F4000DECC9A /* ViewModel.swift */,
 			);
 			path = BaseClasses;
-			sourceTree = "<group>";
-		};
-		27CE41A3249C6E1800DECC9A /* Types */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Types;
 			sourceTree = "<group>";
 		};
 		27CE41A6249C6FC800DECC9A /* Models */ = {
