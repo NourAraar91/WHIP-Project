@@ -43,11 +43,11 @@ struct DataClass: Codable {
 
 // MARK: - Analytics
 struct Analytics: Codable {
-    var job: Job
-    var lineCharts: [[LineChart]]
-    var pieCharts: [PieChart]
-    var rating: Rating
-    var service: Job
+    var job: Job?
+    var lineCharts: [[LineChart]]?
+    var pieCharts: [PieChart]?
+    var rating: Rating?
+    var service: Job?
 }
 
 // MARK: - Job

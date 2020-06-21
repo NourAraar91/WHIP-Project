@@ -48,12 +48,10 @@ final class LineChartCustomView: View {
     }
     
     func setup() {
-        chartView.dragEnabled = true
-        chartView.setScaleEnabled(true)
+        chartView.dragEnabled = false
+        chartView.setScaleEnabled(false)
         chartView.pinchZoomEnabled = false
         chartView.highlightPerDragEnabled = true
-        
-        
         
         let l = chartView.legend
         l.form = .square
@@ -77,7 +75,7 @@ final class LineChartCustomView: View {
         let leftAxis = chartView.leftAxis
         leftAxis.labelPosition = .insideChart
         leftAxis.labelFont = .systemFont(ofSize: 12, weight: .light)
-        leftAxis.drawGridLinesEnabled = true
+        leftAxis.drawGridLinesEnabled = false
         leftAxis.granularityEnabled = true
         leftAxis.labelTextColor = UIColor(red: 44/255, green: 44/255, blue: 44/255, alpha: 1)
         
