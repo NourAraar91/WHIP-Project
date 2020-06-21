@@ -13,6 +13,8 @@ import Charts
 
 final class RatingSummaryView: View {
     
+    @IBOutlet weak var ratingCountLabel: UILabel!
+    @IBOutlet weak var ratingAvgLabel: UILabel!
     @IBOutlet var chartView: HorizontalBarChartView!
     // MARK:- ViewModel
     var viewModel: RatingSummaryViewViewModel! {
@@ -97,6 +99,8 @@ final class RatingSummaryView: View {
 // MARK:- ViewModelBinldable
 extension RatingSummaryView {
     func bind() {
-        setData(viewModel.items)
+        setData(viewModel.ratingItems.value)
+        ratingAvgLabel.text = viewModel.ratingAvg.value
+        ratingCountLabel.text = viewModel.ratingCount.value
     }
 }

@@ -10,10 +10,10 @@ import RxCocoa
 
 class RateTableViewCellViewModel: ViewModel {
     
-    var items: [String: Int]
-
-    init(items: [String: Int]){
-        self.items = items
+    var rating: Rating
+    
+    init(rating: Rating){
+        self.rating = rating
         super.init()
     }
 }

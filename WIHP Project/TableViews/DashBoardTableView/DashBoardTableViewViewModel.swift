@@ -37,8 +37,8 @@ final class DashBoardTableViewViewModel: ViewModel {
             let rateTitleItem = DashBoardTableViewViewModelSectionItem.title(viewModel: rateTitleViewModle)
             strongSelf.sections.append(DashBoardTableViewViewModelSectionModel.section(items: [rateTitleItem]))
             
-            let ratings = response.data.analytics.rating.items
-            let rateViewModle = RateTableViewCellViewModel(items: ratings)
+            let ratings = response.data.analytics.rating
+            let rateViewModle = RateTableViewCellViewModel(rating: ratings)
             let rateItem = DashBoardTableViewViewModelSectionItem.rate(viewModel: rateViewModle)
             strongSelf.sections.append(DashBoardTableViewViewModelSectionModel.section(items: [rateItem]))
             

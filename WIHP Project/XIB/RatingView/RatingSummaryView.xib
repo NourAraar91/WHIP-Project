@@ -9,6 +9,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RatingSummaryView" customModule="WIHP_Project" customModuleProvider="target">
             <connections>
                 <outlet property="chartView" destination="XmQ-06-WKb" id="iNJ-RH-NC3"/>
+                <outlet property="ratingAvgLabel" destination="ZsN-vj-MF6" id="v9i-4N-hj2"/>
+                <outlet property="ratingCountLabel" destination="y9P-Vp-SJJ" id="Kb7-Sg-aRr"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -22,44 +24,56 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jDc-gh-Tnk">
                             <rect key="frame" x="16" y="16" width="351" height="100"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZsN-vj-MF6">
-                                    <rect key="frame" x="0.0" y="0.0" width="80" height="51"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ABr-St-XVR">
+                                    <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZsN-vj-MF6">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="51"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="E6z-8t-2TM"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20.0 Ratings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9P-Vp-SJJ">
+                                            <rect key="frame" x="0.0" y="76" width="71" height="15"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="out of 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKb-X2-1ex">
+                                            <rect key="frame" x="14.5" y="55" width="51" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="80" id="E6z-8t-2TM"/>
+                                        <constraint firstItem="ZsN-vj-MF6" firstAttribute="top" secondItem="ABr-St-XVR" secondAttribute="top" id="2iS-32-e3z"/>
+                                        <constraint firstItem="ZsN-vj-MF6" firstAttribute="leading" secondItem="ABr-St-XVR" secondAttribute="leading" id="C5f-1O-H0R"/>
+                                        <constraint firstAttribute="width" constant="80" id="HtX-OU-4G0"/>
+                                        <constraint firstItem="ZKb-X2-1ex" firstAttribute="centerX" secondItem="ZsN-vj-MF6" secondAttribute="centerX" id="MMF-cd-JLC"/>
+                                        <constraint firstItem="ZKb-X2-1ex" firstAttribute="top" secondItem="ZsN-vj-MF6" secondAttribute="bottom" constant="4" id="PRA-7T-MV1"/>
+                                        <constraint firstItem="y9P-Vp-SJJ" firstAttribute="leading" secondItem="ABr-St-XVR" secondAttribute="leading" id="os6-dx-upB"/>
+                                        <constraint firstItem="y9P-Vp-SJJ" firstAttribute="top" secondItem="ZKb-X2-1ex" secondAttribute="bottom" constant="4" id="q3H-l4-P4b"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20.0 Ratings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9P-Vp-SJJ">
-                                    <rect key="frame" x="0.0" y="76" width="71" height="15"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                    <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="out of 5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKb-X2-1ex">
-                                    <rect key="frame" x="14.5" y="55" width="51" height="17"/>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XmQ-06-WKb" customClass="HorizontalBarChartView" customModule="Charts">
-                                    <rect key="frame" x="71" y="0.0" width="280" height="100"/>
+                                    <rect key="frame" x="80" y="0.0" width="271" height="100"/>
                                 </view>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
-                                <constraint firstItem="ZsN-vj-MF6" firstAttribute="leading" secondItem="jDc-gh-Tnk" secondAttribute="leading" id="6eP-pc-cnw"/>
                                 <constraint firstItem="XmQ-06-WKb" firstAttribute="top" secondItem="jDc-gh-Tnk" secondAttribute="top" id="A4M-WI-ziQ"/>
-                                <constraint firstItem="y9P-Vp-SJJ" firstAttribute="leading" secondItem="jDc-gh-Tnk" secondAttribute="leading" id="EX0-L0-vjH"/>
+                                <constraint firstItem="ABr-St-XVR" firstAttribute="top" secondItem="jDc-gh-Tnk" secondAttribute="top" id="Jg5-ha-ZxY"/>
                                 <constraint firstAttribute="height" constant="100" id="Ml2-dK-rMX"/>
-                                <constraint firstItem="XmQ-06-WKb" firstAttribute="leading" secondItem="y9P-Vp-SJJ" secondAttribute="trailing" id="bib-7O-xI6"/>
-                                <constraint firstItem="ZsN-vj-MF6" firstAttribute="top" secondItem="jDc-gh-Tnk" secondAttribute="top" id="gKp-7r-2QR"/>
+                                <constraint firstItem="ABr-St-XVR" firstAttribute="leading" secondItem="jDc-gh-Tnk" secondAttribute="leading" id="QwY-7W-tfi"/>
                                 <constraint firstAttribute="trailing" secondItem="XmQ-06-WKb" secondAttribute="trailing" id="hTF-EE-fe1"/>
-                                <constraint firstItem="y9P-Vp-SJJ" firstAttribute="top" secondItem="ZKb-X2-1ex" secondAttribute="bottom" constant="4" id="i07-bh-3pA"/>
                                 <constraint firstAttribute="bottom" secondItem="XmQ-06-WKb" secondAttribute="bottom" id="kQy-e2-xRV"/>
-                                <constraint firstItem="ZKb-X2-1ex" firstAttribute="centerX" secondItem="ZsN-vj-MF6" secondAttribute="centerX" id="rXg-sU-OKd"/>
-                                <constraint firstItem="ZKb-X2-1ex" firstAttribute="top" secondItem="ZsN-vj-MF6" secondAttribute="bottom" constant="4" id="wBB-KW-0b1"/>
+                                <constraint firstItem="XmQ-06-WKb" firstAttribute="leading" secondItem="ABr-St-XVR" secondAttribute="trailing" id="tbb-px-VTz"/>
+                                <constraint firstAttribute="bottom" secondItem="ABr-St-XVR" secondAttribute="bottom" id="xuQ-LU-wnn"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -81,7 +95,7 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="80.799999999999997" y="-204.64767616191907"/>
+            <point key="canvasLocation" x="80.799999999999997" y="-205.09745127436284"/>
         </view>
     </objects>
 </document>

@@ -23,6 +23,6 @@ final class RateTableViewCell: UITableViewCell {
 
 extension RateTableViewCell {
     func bind() {
-        rateView.viewModel = RatingSummaryViewViewModel(items: viewModel.items)
+        rateView.viewModel = RatingSummaryViewViewModel(rating: viewModel.rating)
     }
 }
