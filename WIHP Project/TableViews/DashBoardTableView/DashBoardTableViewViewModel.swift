@@ -12,6 +12,27 @@ import RxCocoa
 import RxDataSources
 
 
+enum FilterType: String ,  CaseIterable {
+    case all = "ALL"
+    case today = "TODAY"
+    case last7Days = "LAST 7 DAYS"
+    case last30Days = "LAST 30 DAYS"
+    
+    var value: String {
+        switch self {
+        case .all:
+            return "ALL"
+        case .today:
+            return "TODAY"
+        case .last7Days:
+            return "LAST_7_DAYS"
+        case .last30Days:
+            return "LAST_30_DAYS"
+            
+        }
+    }
+}
+
 final class DashBoardTableViewViewModel: ViewModel {
     
     
@@ -21,84 +42,93 @@ final class DashBoardTableViewViewModel: ViewModel {
     var sections = [DashBoardTableViewViewModelSectionModel]()
     var responseObserver = BehaviorSubject<ResponseAPIResponse?>(value: nil)
     var api = ResponseAPI()
+    var filterTypeVarible: BehaviorRelay<FilterType>
     
-    
-    override init(){
-        
+    init(filterTypeVarible: BehaviorRelay<FilterType>){
+        self.filterTypeVarible = filterTypeVarible
         super.init()
-        requestData()
         
-        responseObserver.asObserver().subscribe(onNext: { [weak self](response) in
-            guard let strongSelf = self else { return }
-            guard let response = response?.response else { return }
-            strongSelf.sections.removeAll()
-            
-            let rateTitleViewModle = TitleTableViewCellViewModel(title: "Rating", subtitle: "Rating Description")
-            let rateTitleItem = DashBoardTableViewViewModelSectionItem.title(viewModel: rateTitleViewModle)
-            strongSelf.sections.append(DashBoardTableViewViewModelSectionModel.section(items: [rateTitleItem]))
-            
-            let ratings = response.data.analytics.rating
-            let rateViewModle = RateTableViewCellViewModel(rating: ratings)
-            let rateItem = DashBoardTableViewViewModelSectionItem.rate(viewModel: rateViewModle)
-            strongSelf.sections.append(DashBoardTableViewViewModelSectionModel.section(items: [rateItem]))
-            
-            
-            
-            let jobTitleViewModle = TitleTableViewCellViewModel(title: "Job", subtitle: "Job Description")
-            let jobTitleItem = DashBoardTableViewViewModelSectionItem.title(viewModel: jobTitleViewModle)
-            strongSelf.sections.append(DashBoardTableViewViewModelSectionModel.section(items: [jobTitleItem]))
-            
-            let jobs = response.data.analytics.job.items
-            var jobsItemsList = [DashBoardTableViewViewModelSectionItem]()
-            for job in jobs {
-                let cellViewModel = JobTableViewCellViewModel(growthItem: job)
-                let jobsItem = DashBoardTableViewViewModelSectionItem.job(viewModel: cellViewModel)
-                jobsItemsList.append(jobsItem)
+        filterTypeVarible
+            .asObservable()
+            .subscribe(onNext: { [weak self] (value) in
+                guard let strongSelf = self else { return }
+                strongSelf.requestData(filterType: value)
+            }).disposed(by: disposeBag)
+        
+        
+        responseObserver
+            .asObserver()
+            .subscribe(onNext: { [weak self](response) in
+                guard let strongSelf = self else { return }
+                guard let response = response?.response else { return }
+                strongSelf.sections.removeAll()
                 
-            }
-            strongSelf.sections.append(DashBoardTableViewViewModelSectionModel.section(items: jobsItemsList))
-            
-            
-            let servicesTitleViewModle = TitleTableViewCellViewModel(title: "Services", subtitle: "Services Description")
-            let servicesTitleItem = DashBoardTableViewViewModelSectionItem.title(viewModel: servicesTitleViewModle)
-            strongSelf.sections.append(DashBoardTableViewViewModelSectionModel.section(items: [servicesTitleItem]))
-            
-            let services = response.data.analytics.service.items
-            var servicesItemsList = [DashBoardTableViewViewModelSectionItem]()
-            for service in services {
-                let cellViewModel = JobTableViewCellViewModel(growthItem: service)
-                let serviceItem = DashBoardTableViewViewModelSectionItem.job(viewModel: cellViewModel)
-                servicesItemsList.append(serviceItem)
+                let rateTitleViewModle = TitleTableViewCellViewModel(title: "Rating", subtitle: "Rating Description")
+                let rateTitleItem = DashBoardTableViewViewModelSectionItem.title(viewModel: rateTitleViewModle)
+                strongSelf.sections.append(DashBoardTableViewViewModelSectionModel.section(items: [rateTitleItem]))
                 
-            }
-            strongSelf.sections.append(DashBoardTableViewViewModelSectionModel.section(items: servicesItemsList))
-            
-            
-            
-            let linecharts = response.data.analytics.lineCharts
-            var lineChartItemsList = [DashBoardTableViewViewModelSectionItem]()
-            for chart in linecharts.first ?? [] {
-                let cellViewModel = LineChartTableViewCellViewModel(chart: chart)
-                let lineItem = DashBoardTableViewViewModelSectionItem.lineChart(viewModel: cellViewModel)
-                lineChartItemsList.append(lineItem)
+                let ratings = response.data.analytics.rating
+                let rateViewModle = RateTableViewCellViewModel(rating: ratings)
+                let rateItem = DashBoardTableViewViewModelSectionItem.rate(viewModel: rateViewModle)
+                strongSelf.sections.append(DashBoardTableViewViewModelSectionModel.section(items: [rateItem]))
                 
-            }
-            strongSelf.sections.append(DashBoardTableViewViewModelSectionModel.section(items: lineChartItemsList))
-            
-            
-            let piecharts = response.data.analytics.pieCharts
-            var pieChartItemsList = [DashBoardTableViewViewModelSectionItem]()
-            for chart in piecharts {
-                let cellViewModel = PieChartTableViewCellViewModel(chart: chart)
-                let pieItem = DashBoardTableViewViewModelSectionItem.pieChart(viewModel: cellViewModel)
-                pieChartItemsList.append(pieItem)
                 
-            }
-            strongSelf.sections.append(DashBoardTableViewViewModelSectionModel.section(items: pieChartItemsList))
-            
-            
-            strongSelf.sectionsModels.accept(strongSelf.sections)
-        }).disposed(by: disposeBag)
+                
+                let jobTitleViewModle = TitleTableViewCellViewModel(title: "Job", subtitle: "Job Description")
+                let jobTitleItem = DashBoardTableViewViewModelSectionItem.title(viewModel: jobTitleViewModle)
+                strongSelf.sections.append(DashBoardTableViewViewModelSectionModel.section(items: [jobTitleItem]))
+                
+                let jobs = response.data.analytics.job.items
+                var jobsItemsList = [DashBoardTableViewViewModelSectionItem]()
+                for job in jobs {
+                    let cellViewModel = JobTableViewCellViewModel(growthItem: job)
+                    let jobsItem = DashBoardTableViewViewModelSectionItem.job(viewModel: cellViewModel)
+                    jobsItemsList.append(jobsItem)
+                    
+                }
+                strongSelf.sections.append(DashBoardTableViewViewModelSectionModel.section(items: jobsItemsList))
+                
+                
+                let servicesTitleViewModle = TitleTableViewCellViewModel(title: "Services", subtitle: "Services Description")
+                let servicesTitleItem = DashBoardTableViewViewModelSectionItem.title(viewModel: servicesTitleViewModle)
+                strongSelf.sections.append(DashBoardTableViewViewModelSectionModel.section(items: [servicesTitleItem]))
+                
+                let services = response.data.analytics.service.items
+                var servicesItemsList = [DashBoardTableViewViewModelSectionItem]()
+                for service in services {
+                    let cellViewModel = JobTableViewCellViewModel(growthItem: service)
+                    let serviceItem = DashBoardTableViewViewModelSectionItem.job(viewModel: cellViewModel)
+                    servicesItemsList.append(serviceItem)
+                    
+                }
+                strongSelf.sections.append(DashBoardTableViewViewModelSectionModel.section(items: servicesItemsList))
+                
+                
+                
+                let linecharts = response.data.analytics.lineCharts
+                var lineChartItemsList = [DashBoardTableViewViewModelSectionItem]()
+                for chart in linecharts.first ?? [] {
+                    let cellViewModel = LineChartTableViewCellViewModel(chart: chart)
+                    let lineItem = DashBoardTableViewViewModelSectionItem.lineChart(viewModel: cellViewModel)
+                    lineChartItemsList.append(lineItem)
+                    
+                }
+                strongSelf.sections.append(DashBoardTableViewViewModelSectionModel.section(items: lineChartItemsList))
+                
+                
+                let piecharts = response.data.analytics.pieCharts
+                var pieChartItemsList = [DashBoardTableViewViewModelSectionItem]()
+                for chart in piecharts {
+                    let cellViewModel = PieChartTableViewCellViewModel(chart: chart)
+                    let pieItem = DashBoardTableViewViewModelSectionItem.pieChart(viewModel: cellViewModel)
+                    pieChartItemsList.append(pieItem)
+                    
+                }
+                strongSelf.sections.append(DashBoardTableViewViewModelSectionModel.section(items: pieChartItemsList))
+                
+                
+                strongSelf.sectionsModels.accept(strongSelf.sections)
+            }).disposed(by: disposeBag)
     }
     
     func skinTableViewDataSource() -> RxTableViewSectionedReloadDataSource<DashBoardTableViewViewModelSectionModel>{
@@ -144,15 +174,16 @@ final class DashBoardTableViewViewModel: ViewModel {
 
 extension DashBoardTableViewViewModel {
     func refresh() {
-        requestData()
+        requestData(filterType: filterTypeVarible.value)
     }
 }
 
 extension DashBoardTableViewViewModel {
-    fileprivate func requestData() {
-        api.request(completionHandler: {[weak self] (response) in
-            guard let strongSelf = self else { return }
-            strongSelf.responseObserver.onNext(response)
+    fileprivate func requestData(filterType: FilterType) {
+        api.request(scope: filterType.value,
+                    completionHandler: {[weak self] (response) in
+                        guard let strongSelf = self else { return }
+                        strongSelf.responseObserver.onNext(response)
         }) { (error) in
             print(error)
         }

@@ -46,7 +46,7 @@ final class DashBoardTableView: UITableView {
         refreshController.rx
             .controlEvent(UIControlEvents.valueChanged)
             .subscribe(onNext: {[weak self] (_) in
-            self?.viewModel.refresh()
+            self?.refresh()
             self?.refreshController.endRefreshing()
             }).disposed(by: disposeBag)
             

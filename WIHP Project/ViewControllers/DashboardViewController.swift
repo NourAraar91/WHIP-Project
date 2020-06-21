@@ -12,13 +12,15 @@ import RxCocoa
 
 final class DashboardViewController: UIViewController {
     
-    // MARK:- IBOutlet
-    @IBOutlet weak var tableView: DashBoardTableView! {
-        didSet{
-            let vm = DashBoardTableViewViewModel()
-            tableView.viewModel = vm
+    @IBOutlet weak var filterDropDown: DropDownView! {
+        didSet {
+            let dropDownViewModel = DropDownViewViewModel(dataSource: viewModel.filterTypesDataSource, selectedIndex: viewModel.selectedIndex)
+            filterDropDown.viewModel = dropDownViewModel
+            filterDropDown.selecteAt(index: 0)
         }
     }
+    // MARK:- IBOutlet
+    @IBOutlet weak var tableView: DashBoardTableView!
     
     // MARK:- ViewModel
     var viewModel: DashboardViewControllerViewModel!
@@ -26,14 +28,25 @@ final class DashboardViewController: UIViewController {
     // MARK:- Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        bind() 
+        bind()
+        makeNavBarTranslucent()
     }
     
+    func makeNavBarTranslucent() {
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.view.backgroundColor = .clear
+    }
 }
 
 // MARK:- ViewModelBinldable
 extension DashboardViewController {
     func bind() {
+        let tableViewViewModel = DashBoardTableViewViewModel(filterTypeVarible: viewModel.filterTypeVarible)
+        tableView.viewModel = tableViewViewModel
+        
+
     }
 }
 
